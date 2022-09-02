@@ -1,6 +1,6 @@
 package com.example.accountsservice.controller.home
 
-import com.example.accountsservice.constants.Constants.WELCOME
+import com.example.accountsservice.constant.Constants.WELCOME
 import com.example.accountsservice.service.HomeService
 import org.hamcrest.Matchers.containsString
 import org.junit.jupiter.api.Test
@@ -30,11 +30,11 @@ class HomeControllerMockMvcTest {
 
     @Test
     fun `welcome should return the correct string`() {
-        `when`(homeService.welcome()).thenReturn(WELCOME.message)
+        `when`(homeService.welcome()).thenReturn(WELCOME.value)
 
         mockMvc.perform(get("/"))
             .andDo(print())
             .andExpect(status().isOk)
-            .andExpect(content().string(containsString(WELCOME.message)))
+            .andExpect(content().string(containsString(WELCOME.value)))
     }
 }

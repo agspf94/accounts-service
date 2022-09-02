@@ -1,6 +1,6 @@
 package com.example.accountsservice.service.home
 
-import com.example.accountsservice.constants.Constants.WELCOME
+import com.example.accountsservice.constant.Constants.WELCOME
 import com.example.accountsservice.service.HomeService
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Assertions
@@ -20,6 +20,6 @@ class HomeServiceTest {
 
     @Test
     fun `welcome should return the correct string`() {
-        Assertions.assertEquals(WELCOME.message, homeService.welcome())
+        Assertions.assertEquals(WELCOME.value, homeService.welcome())
     }
 }

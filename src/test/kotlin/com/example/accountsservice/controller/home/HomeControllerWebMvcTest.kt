@@ -1,6 +1,6 @@
 package com.example.accountsservice.controller.home
 
-import com.example.accountsservice.constants.Constants.WELCOME
+import com.example.accountsservice.constant.Constants.WELCOME
 import com.example.accountsservice.controller.HomeController
 import com.example.accountsservice.service.HomeService
 import org.hamcrest.Matchers
@@ -28,11 +28,11 @@ class HomeControllerWebMvcTest {
 
     @Test
     fun `welcome should return the correct string`() {
-        `when`(homeService.welcome()).thenReturn(WELCOME.message)
+        `when`(homeService.welcome()).thenReturn(WELCOME.value)
 
         mockMvc.perform(MockMvcRequestBuilders.get("/"))
             .andDo(MockMvcResultHandlers.print())
             .andExpect(MockMvcResultMatchers.status().isOk)
-            .andExpect(MockMvcResultMatchers.content().string(Matchers.containsString(WELCOME.message)))
+            .andExpect(MockMvcResultMatchers.content().string(Matchers.containsString(WELCOME.value)))
     }
 }

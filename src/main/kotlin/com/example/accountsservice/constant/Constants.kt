@@ -1,7 +1,7 @@
-package com.example.accountsservice.constants
+package com.example.accountsservice.constant
 
 enum class Constants(
-    val message: String
+    val value: String
 ) {
     WELCOME("Welcome to DevPath. This is the accounts-service")
 }
