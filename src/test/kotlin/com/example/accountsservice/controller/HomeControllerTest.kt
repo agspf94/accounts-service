@@ -15,7 +15,7 @@ class HomeControllerTest {
     private lateinit var homeController: HomeController
 
     @Test
-    fun `Home Controller is not null`() {
+    fun `Home Controller should be not null`() {
         assertThat(homeController).isNotNull
     }
 }

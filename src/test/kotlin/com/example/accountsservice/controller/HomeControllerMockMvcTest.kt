@@ -29,12 +29,12 @@ class HomeControllerMockMvcTest {
     private lateinit var homeService: HomeService
 
     @Test
-    fun `Home Controller getHome should return the correct string`() {
+    fun `welcome should return the correct string`() {
         `when`(homeService.welcome()).thenReturn(WELCOME.message)
 
         mockMvc.perform(get("/"))
             .andDo(print())
             .andExpect(status().isOk)
-            .andExpect(content().string(containsString("Welcome to DevPath. This is the accounts-service")))
+            .andExpect(content().string(containsString(WELCOME.message)))
     }
 }

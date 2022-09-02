@@ -28,9 +28,9 @@ class HomeControllerRestTemplateTest {
     private lateinit var homeService: HomeService
 
     @Test
-    fun `Home Controller getHome should return the correct string`() {
+    fun `welcome should return the correct string`() {
         `when`(homeService.welcome()).thenReturn(WELCOME.message)
 
-        assertThat(restTemplate.getForObject("http://localhost:$port/", String::class.java)).contains("Welcome to DevPath. This is the accounts-service")
+        assertThat(restTemplate.getForObject("http://localhost:$port/", String::class.java)).contains(WELCOME.message)
     }
 }
