@@ -5,6 +5,9 @@ plugins {
     id("io.spring.dependency-management") version "1.0.13.RELEASE"
     kotlin("jvm") version "1.6.21"
     kotlin("plugin.spring") version "1.6.21"
+
+    // Spring Data JPA
+    kotlin("plugin.jpa") version "1.6.21"
 }
 
 group = "com.example"
@@ -23,6 +26,12 @@ dependencies {
     // Spring Web
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
+
+    // Spring Data JPA
+    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+
+    // H2 Database
+    runtimeOnly("com.h2database:h2")
 
     // Testing - Default
     testImplementation("org.springframework.boot:spring-boot-starter-test")
