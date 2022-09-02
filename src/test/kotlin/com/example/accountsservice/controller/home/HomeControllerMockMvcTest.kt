@@ -1,4 +1,4 @@
-package com.example.accountsservice.controller
+package com.example.accountsservice.controller.home
 
 import com.example.accountsservice.constants.Constants.WELCOME
 import com.example.accountsservice.service.HomeService

@@ -1,5 +1,6 @@
-package com.example.accountsservice.controller
+package com.example.accountsservice.controller.home
 
+import com.example.accountsservice.controller.HomeController
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired

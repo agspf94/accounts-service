@@ -1,6 +1,7 @@
-package com.example.accountsservice.controller
+package com.example.accountsservice.controller.home
 
 import com.example.accountsservice.constants.Constants.WELCOME
+import com.example.accountsservice.controller.HomeController
 import com.example.accountsservice.service.HomeService
 import org.hamcrest.Matchers
 import org.junit.jupiter.api.Test
