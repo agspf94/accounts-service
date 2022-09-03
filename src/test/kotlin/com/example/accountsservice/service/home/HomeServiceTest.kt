@@ -1,9 +1,9 @@
 package com.example.accountsservice.service.home
 
-import com.example.accountsservice.constant.Constants.WELCOME
+import com.example.accountsservice.constant.Constants.Companion.WELCOME
 import com.example.accountsservice.service.HomeService
 import org.assertj.core.api.Assertions.assertThat
-import org.junit.jupiter.api.Assertions
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
@@ -20,6 +20,6 @@ class HomeServiceTest {
 
     @Test
     fun `welcome should return the correct string`() {
-        Assertions.assertEquals(WELCOME.value, homeService.welcome())
+        assertEquals(WELCOME, homeService.welcome())
     }
 }

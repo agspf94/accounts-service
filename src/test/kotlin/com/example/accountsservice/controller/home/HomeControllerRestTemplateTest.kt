@@ -1,6 +1,6 @@
 package com.example.accountsservice.controller.home
 
-import com.example.accountsservice.constant.Constants.WELCOME
+import com.example.accountsservice.constant.Constants.Companion.WELCOME
 import com.example.accountsservice.service.HomeService
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
@@ -29,8 +29,8 @@ class HomeControllerRestTemplateTest {
 
     @Test
     fun `welcome should return the correct string`() {
-        `when`(homeService.welcome()).thenReturn(WELCOME.value)
+        `when`(homeService.welcome()).thenReturn(WELCOME)
 
-        assertThat(restTemplate.getForObject("http://localhost:$port/", String::class.java)).contains(WELCOME.value)
+        assertThat(restTemplate.getForObject("http://localhost:$port/", String::class.java)).contains(WELCOME)
     }
 }
