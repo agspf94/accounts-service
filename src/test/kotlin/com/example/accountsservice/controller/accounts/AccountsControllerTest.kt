@@ -37,7 +37,7 @@ class AccountsControllerTest {
         val accountRequest = AccountRequest("Anderson","1994-01-13")
         val account = accountRequest.toAccount()
 
-        `when`(accountsService.create(accountRequest)).thenReturn(account)
+        `when`(accountsService.createAccount(accountRequest)).thenReturn(account)
 
         mockMvc.perform(
                 post("/accounts/create").accept(APPLICATION_JSON)
