@@ -39,12 +39,12 @@ class AccountsController(
     }
 
     @PatchMapping("/edit/{id}")
-    fun editAccount(@RequestBody account: Account): Account? {
+    fun editAccount(@RequestBody account: Account): Account {
         return accountsService.editAccount(account)
     }
 
     @DeleteMapping("/delete/{id}")
-    fun deleteAccount(@PathVariable id: Long): DeleteResponse? {
+    fun deleteAccount(@PathVariable id: Long): DeleteResponse {
         return accountsService.deleteAccount(id)
     }
 }
