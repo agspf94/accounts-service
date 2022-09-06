@@ -33,7 +33,7 @@ class AccountsService(
             .ifEmpty { throw EmptyListException(EMPTY_LIST) }
     }
 
-    fun editAccount(account: Account): Account? {
+    fun editAccount(account: Account): Account {
         return accountsRepository.findById(account.id)
             .map {
                 accountsRepository.save(
@@ -47,7 +47,7 @@ class AccountsService(
             .orElseThrow { NoSuchElementException(NOT_FOUND) }
     }
 
-    fun deleteAccount(id: Long): DeleteResponse? {
+    fun deleteAccount(id: Long): DeleteResponse {
         return accountsRepository.findById(id)
             .map {
                 accountsRepository.deleteById(id)
